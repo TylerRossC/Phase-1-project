@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Phase 1 Project</title>
+</head>
+
+<body>
+    <header id="header">Random Joke Generator!!!</header>
+    <button id="get-joke-btn">Get Joke!</button>
+    <div style="text-align:center" id="joke-display"></div>
+
+    <div id="response-box">
+        <input type="text" id="response" name="punchlineguess" placeholder="Give it your best shot!">
+        <label for="response"></label>
+        <button id="submit-punchline" onclick="clearOnSubmit();">Submit</button>
+        <div style="text-align:center" id="actual-punchline"></div>
+    </div>
+
+
+    <div style="text-align:center" id="contact-me">
+        <h3>Contact Me</h3>
+        <form id="feedback-form">
+
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="usa">USA</option>
+                <option value="canada">Canada</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label id="feedback-label" for="subject">Feedback</label>
+            <br>
+            <br>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            <br>
+            <br>
+            <button id="submit-feedback-button" onclick="clearOnSubmit();">Submit Feedback</button>
+
+    </div>
+    </div>
+    <script src="./JS/index.js"></script>
+</body>
+
+</html>

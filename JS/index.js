@@ -4,6 +4,7 @@ let jokeDisplay = document.querySelector("#joke-display")
 let submitBtn = document.querySelector("#submit-punchline")
 let punchlineDisplay = document.querySelector("#actual-punchline")
 let punchline;
+let feedbackBtn = document.querySelector("#feedback-form")
 
 document.addEventListener('DOMContentLoaded', function () {
     jokeButton.addEventListener('click', randomJoke)
@@ -49,3 +50,19 @@ function clearOnFeedbackSubmit() {      //This function clears all text boxes an
     document.querySelector('#subject').value = ""
     document.querySelector('#country').value = "USA"
 }
+
+feedbackBtn.addEventListener('submit', displayFeedback)
+
+
+function displayFeedback(e) {
+    let first = document.querySelector('#fname')
+    let last = document.querySelector('#lname')
+    let sub = document.querySelector('#subject')
+    let country = document.querySelector('#country')
+    let display = document.createElement('p')
+    display.innerText = `${first.value} ${last.value} ${sub.value} ${country.value}`
+    document.body.appendChild(display)
+    e.preventDefault()
+    clearOnFeedbackSubmit()
+}
+
